@@ -1,6 +1,16 @@
 body{
   background-color: #778beb;
   text-align: center;
+  margin: 50px 0px 50px 0px;
+  font-family: 'Shrikhand', cursive;
+}
+
+input:invalid {
+  border: 2px dashed black;
+}
+
+input:valid {
+  border: 2px solid black;
 }
 
 .container{
@@ -10,20 +20,33 @@ body{
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
   margin: 0px 10% 0px 10%;
+  padding: 10px;
 }
 .box1_1{
-  display: inline-block;
-  text-align: right;
-  vertical-align: center;
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0px 10px 0px;
+  align-items: flex-start;
+  font-family: 'Quicksand', sans-serif;
+
 }
 .box1_2{
-  display: inline-block;
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px 0px 10px 0px;
+  align-items: flex-start;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.radio, .checkbox {
   text-align: left;
-  vertical-align: center;
+  position: relative;
+  left: -40px;
 }
 
 #title {
-  color: #303952;
+  color: black;
 }
 
 #description {
@@ -37,8 +60,36 @@ body{
 
 #name{
   margin: 0px, 0px, 0px, 10px;
+  width : 200px;
 }
 
 #email{
   margin: 0px, 0px, 0px, 10px;
+  width : 200px;
+}
+
+#number {
+  width : 200px;
+}
+
+#name-label{
+  
+}
+#email-label{
+  
+}
+#number-label{
+  
+}
+
+#dropdown{
+  width: 200px;
+}
+
+#submit{
+  font-size: 0.9em;
+  background-color: #303952;
+  color: white;
+  height: 40px;
+  width: 80px;
 }

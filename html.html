@@ -1,4 +1,5 @@
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Quicksand:500|Shrikhand" rel="stylesheet">
 
 <!-- 
 
@@ -20,19 +21,70 @@ For now, the test suite only works in Chrome! Please read the README below in th
   </header>
   
   <main>
-    <div class="container">
-      <form id="survey-form">
+    <form id="survey-form">
+      <div class="container">
+      
         
-    <div class="box1_1">
-      <label for="name">Name : </label></div>
+      <div class="box1_1">
+      <label for="name"  id="name-label">* Name : </label></div>  
+      <div class="box1_2">
+      <input type="text" name="name" id="name" placeholder="Enter your name" required></div>
+      
+      <div class="box1_1">
+      <label for="email" id="email-label">* Email : </label></div>  
+      <div class="box1_2">
+      <input type="email" name="email" id="email" placeholder="Enter your email adress" required pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"></div>
+      
+      <div class="box1_1">
+      <label for="age"  id="number-label">Age : </label></div>  
+      <div class="box1_2">
+      <input type="number" name="age" id="number" placeholder="Enter your age" min="1" max="100"></div>
         
-    <div class="box1_2">
-    <input type="text" name="name" id="name" placeholder="Enter your name in English" required>
-    </div>
-
-
-      </form>
-    </div>
+      <div class="box1_1 ">
+      <label for="currentStatus">Current Status : </label></div>  
+      <div class="box1_2">
+      <select id="dropdown" min="1" max="100">
+        <option value="">--Please choose an option--</option>
+        <option value="student">Student</option>
+        <option value="emplyoed">Employed</option>
+        <option value="Unemplyed">Unemployed</option>
+        <option value="prefer not to say">Prefer not to say</option>
+        <option value="other">Other</option>
+        </select></div>
+        
+      <div class="box1_1">
+        <label for="location" style="text-align: right">Which continent have you visited as a exchange student?</label></div>
+      <div class="box1_2" style="margin: -5px 0px -10px 0px">
+        <ul style="list-style: none">
+          <li class="radio"><label><input type="radio" name="continent" value="1">Asia</label></li>
+          <li class="radio"><label><input type="radio" name="continent" value="2">Europe</label></li>
+          <li class="radio"><label><input type="radio" name="continent" value="3">North America</label></li>
+          <li class="radio"><label><input type="radio" name="continent" value="4">Others</label></li>
+        </ul>
+      </div>
+        
+      <div class="box1_1">
+        <label for="interst" style="text-align: right">What activity are you interested in?</label></div>
+      <div class="box1_2" style="margin: -5px 0px -10px 0px">
+        <ul style="list-style: none">
+          <li class="checkbox"><label><input type="checkbox" name="continent" value="1">Networking</label></li>
+          <li class="checkbox"><label><input type="checkbox" name="continent" value="2">ESAA Project and Funding</label></li>
+          <li class="checkbox"><label><input type="checkbox" name="continent" value="3">Board Member</label></li>
+          <li class="checkbox"><label><input type="checkbox" name="continent" value="4">Others</label></li>
+        </ul>
+      </div>
+        
+      <div class="box1_1">
+        <label for="comment" style="text-align: right">Any suggestion or comment for OCEANS Network?</label>  
+      </div>
+      <div class="box1_2">
+        <textarea id="comment" name="comment" rows="5" cols="26" placeholder="Please write here.."></textarea>  
+        </div>
+      </div>
+       <br>
+       <button id="submit" type="submit" >Submit</button>
+    </form>
+    
   </main>
   
   <footer></footer>
